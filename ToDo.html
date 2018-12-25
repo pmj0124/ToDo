@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo</title>
+    <script>
+        var a,b,c;
+
+        function Todoitem(Deadline,User,Text) {
+            this.Deadline = Deadline;
+            this.User = User;
+            this.Text = Text;
+        }
+        var DeadlineVariable,UserVariable,TextVariable;
+        function write(DeadlineVariable) {
+            var returnValue = prompt("add todo",DeadlineVariable);
+            var Test =new Todoitem(DeadlineVariable,null,null);
+            console.log(Test);
+        }
+        window.onload = function() {
+            var CreateButton = document.getElementById("createtodoitem");
+            var DeletetodoButton= document.getElementById("deletetodoitem");
+
+            CreateButton.onclick = write;
+        }
+
+    </script>
+</head>
+<body>
+<input type="button" value="create" id="createtodoitem">
+<input type="button" value="delete" id="deletetodoitem">
+</body>
+</html>
